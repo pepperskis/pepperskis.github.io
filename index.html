@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+    <title>Preston Thorley Resume</title>
+    <style>
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,
+        dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,
+        aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,
+        audio,video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: navy;
+            border: solid gray;
+            border-width: 1px 0px 1px 0px;
+
+            margin-bottom: 0.5em;
+            padding: 0.5em;
+
+        }
+
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            padding-bottom: 5px;
+            color: navy;
+            font-weight: 590;
+        }
+
+        h5 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10px;
+            padding-bottom: 5px;
+            color: navy;
+            font-style: italic;
+        }
+
+        ul {
+            font-size: 10px;
+            font-family: 'Open Sans', sans-serif;
+            position: relative;
+            list-style-type: circle;
+            padding: 5px;
+            left: 14px;
+        }
+
+        li {
+            padding-bottom: 0px;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 1em;
+            font-size: ;
+        }
+
+        .info-section {
+            display: grid;
+            grid-template-columns: 15.0% 85.0%;
+        }
+
+
+        .box {
+            padding: 8px;
+        }
+
+
+        .date {
+            font-size: 12px;
+        }
+
+        .detail {
+            vertical-align: top;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #043D71;
+            overflow-x: hidden;
+            color: black;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            letter-spacing: 0.7px;
+        }
+
+        .sidenav h1 {
+            font-size: 24px;
+            padding-bottom: 20px;
+            font-weight: bold;
+            margin-top: 17px;
+            padding: 0px 0px 10px 15px;
+        }
+
+        .sidenav h2 {
+            font-weight: lighter;
+            padding: 0px 0px 0px 15px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+        }
+
+        .main {
+            margin-left: 250px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-width: 10000px) {
+            .sidenav {padding-top: px;}
+            .sidenav a {font-size: px;}
+        }
+
+        .sidenav-text > .sidenav-subheading {
+            font-weight: lighter;
+        }
+
+        .personal-info {
+            padding-top: 15px;
+        }
+
+        .personal-info > .personal-info-text {
+            background-color: #1D2B50;
+            margin: auto;
+            padding: 8px 15px 8px 15px;
+        }
+
+        .sidenav-text > .personal-info > .phone {
+            margin: 5px 5px 5px 0px;
+            padding: 8px 5px 5px 15px;
+            font-size: 12px;
+            color: black;
+        }
+
+        .sidenav-text > .personal-info > .phone > .phone-text {
+            padding-top: 5px;
+        }
+
+        .sidenav-text > .personal-info > .email {
+            margin: 5px 5px 5px 0px;
+            padding: 5px 5px 5px 15px;
+            font-size: 12px;
+            color: black;
+        }
+
+        .sidenav-text > .personal-info > .email > .email-text {
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .skills > .skills-text {
+            background-color: #1D2B50;
+            margin: auto;
+            padding: 8px 15px 8px 15px;
+        }
+
+        .skills > .bumhead {
+            margin: 5px 5px 5px 0px;
+            padding: 8px 5px 5px 15px;
+            font-size: 12px;
+            color: black;
+        }
+
+        .main > .bongus {
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <h1>Preston Thorley</h1>
+        <h2>Entrepreneur</h2>
+
+        <div class="sidenav-text">
+            <div class="personal-info">
+                <div class="personal-info-text">
+                    <h6>Personal Info</h6>
+                </div>
+                <div class="phone">
+                    <h6>Phone</h6>
+                <div class="phone-text">
+                    <h6>385-377-3439</h6>
+                </div>
+                </div>
+                <div class="email">
+                    <h6>E-mail</h6>
+                    <div class="email-text">
+                        <h6>thorley.preston@gmail.com</h6>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="skills">
+                <div class="skills-text">
+                    <h6>Skills</h6>
+                </div>
+
+                <div class="bumhead">
+                    <p>Hard Work Ethic</p>
+                    <p>Communication</p>
+                    <p>Leadership</p>
+                    <p>Promptness</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="main">
+        <div class="bongus">
+            <p>
+                Preston Thorley is an entrepreneur. He is looking for a first job to earn some money for college. His qualities include excellence, promptness, communication, leadership, and a hard work ethic.
+            </p>
+        </div>
+        <h3>Experience</h3>
+
+        <div class="info-section">
+            <div class="box date">Summer of 2021</div>
+            <div class="box detail">
+                <h4>Partner in a Lawnmowing Business</h4>
+
+                <h5>West Jordan UT</h5>
+                <ul>
+                    <li>Led friends in learning to make money and business for people</li>
+                    <li>Managed a budget and paid employees</li>
+                    <li>Used a tight schedule which ensured timely customer service</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="box date">2018 — Present</div>
+            <div class="box detail">
+                <h4>Youth Worship Band Member</h4>
+
+                <h5>Calvary Chapel and The Door Christian Fellowship</h5>
+                <ul>
+                    <li>Showed up on time to band practice and other activities</li>
+                    <li>Collaborated with others as a team player</li>
+                    <li>Learned leadership in a fun and inclusive way</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="box date">2018 — Present</div>
+            <div class="box detail">
+                <h4>Youth Outreach Leader</h4>
+                <h5>Calvary Chapel</h5>
+                <ul>
+                    <li>Learned leadership in a fun and inclusive way</li>
+                    <li>Partnered with others on finding costs and getting permission</li>
+                    <li>Gained knowledge on promotion and advertisement for church activities</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="box date">2016 — 2019</div>
+            <div class="box detail">
+                <h4>Childcare Classroom Assistant</h4>
+                <h5>Calvary Chapel</h5>
+                <ul>
+                    <li>Attended to the needs of children </li>
+                    <li>Provided a fun and safe atmosphere conducive to learning</li>
+                    <li>Taught meaningful lessons about Jesus and puppies</li>
+                    <li>Resolved conflicts and arguments</li>
+                </ul>
+            </div>
+        </div>
+        <h3>Accomplishments</h3>
+        <div class="info-section">
+            <div class="box date">2020 — 2021</div>
+            <div class="box detail">
+                <h4>Wrestling</h4>
+                <h5>West Jordan High School</h5>
+                <ul>
+                    <li >Lettered on theVarsity team freshman year</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="box date">2016 — 2020</div>
+            <div class="box detail">
+                <h4>Jr.Jazz</h4>
+                <h5>West Jordan and Kearns</h5>
+                <ul>
+                    <li>Undefeated team for 2 years in a row</li>
+                    <li>Semifinals Win</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="box date">2016 — 2020</div>
+            <div class="box detail">
+                <h4>Honor Roll</h4>
+                <h5>Childrens Christian School</h5>
+                <ul>
+                    <li>Achieved Honor Roll every year at CCS</li>
+                </ul>
+            </div>
+        </div>
+        <h3>Education</h3>
+        <div class="info-section">
+            <div class="box date">Present</div>
+            <div class="box detail">
+                <h4>West Jordan High School</h4>
+                <h5>West Jordan</h5>
+                <ul>
+                    <li>Sophomore Year</li>
+                    <li>Currently Studying World History AP and Web Development</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+
+</html>
